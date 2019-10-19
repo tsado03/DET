@@ -17,6 +17,31 @@ public class MoveObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Kann aktuell nur nach vorne schießen
+        transform.Translate(Vector3.forward * Time.deltaTime * speed);
+
+    }
+
+    
+    // Methoden die eine movement / schießen in alle Richutungen realisieren
+    void moveForward()
+    {
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
+
+    void moveBackwards()
+    {
+        transform.Translate(Vector3.back * Time.deltaTime * speed);
+    }
+
+    void moveLeft()
+    {
+        transform.Translate(Vector3.left * Time.deltaTime * speed);
+    }
+
+    void moveRight()
+    {
+        transform.Translate(Vector3.right * Time.deltaTime * speed);
+    }
+
 }
