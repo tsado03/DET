@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DestroySimpleBoullets : MonoBehaviour
 {
-    private float xOutOfBound = 15.0f;
+    private float xOutOfBound = 20.0f;
     private float zOutOfBound = 7.4f;
 
     // Start is called before the first frame update
@@ -17,7 +17,7 @@ public class DestroySimpleBoullets : MonoBehaviour
     void Update()
     {
         if (transform.position.x < -xOutOfBound || transform.position.z > xOutOfBound ||
-            transform.position.z < -3 * zOutOfBound || transform.position.z > zOutOfBound) 
+            transform.position.z < -3 * zOutOfBound || transform.position.z > zOutOfBound + 10.0f) 
         {
             Destroy(gameObject);
         }
