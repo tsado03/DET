@@ -7,20 +7,14 @@ public class PayerMouvements : MonoBehaviour
     private float horizontalInput;
     private float verticalInput;
     public float speed = 3.0f;
-    public float xBoundary = 15.0f;
-    public float zBoundary = 7.2f; //standard actual values
-    private float zIntervalForOutOfBound;
-    private float xIntervalForOutOfBound = 20.0f;
-    //private Vector3 thePointWherePlayerSchouldBeTeleported;
-
-    public Rigidbody body;
+    //public float xBoundary = 18.5f; //standard actual values
+    //public float zBoundary = 7.4f; //standard actual values
     public GameObject boullet;
 
     // Start is called before the first frame update
     void Start()
     {
-        //thePointWherePlayerSchouldBeTeleported = new Vector3(xIntervalForOutOfBound, 0.0f, zIntervalForOutOfBound);
-        body = GetComponent<Rigidbody>();
+        
     }
 
     // Update is called once per frame
@@ -30,10 +24,9 @@ public class PayerMouvements : MonoBehaviour
         verticalInput = Input.GetAxis("Vertical");
         horizontalInput = Input.GetAxis("Horizontal");
 
-        // Applies input onto the velocity of the player's rigidbody to move the player
-        body.velocity = transform.forward * speed * verticalInput * Time.deltaTime;
+        //Make the player look arround(directional mouvements)
         transform.Rotate(0, horizontalInput * 3, 0);
-
+        //Make the player move
         verticalInput = Input.GetAxis("Vertical");
         transform.Translate(Vector3.forward * verticalInput * Time.deltaTime * speed);
         

@@ -387,7 +387,7 @@ GameObject:
   - component: {fileID: 136364000145149562}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -456,9 +456,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  xBoundary: 20
-  zBoundary: 7.4
-  body: {fileID: 0}
   boullet: {fileID: 4943922784851631018, guid: d613e62472476204d8a10901027e6ec8, type: 3}
 --- !u!136 &136364000145149562
 CapsuleCollider:
