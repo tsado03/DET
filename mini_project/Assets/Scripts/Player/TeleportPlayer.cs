@@ -24,6 +24,8 @@ public class TeleportPlayer : MonoBehaviour
         if(other.gameObject.tag == "Player") {
             Debug.Log("gameObject ist the player");
             player.transform.position = teleportLocation.transform.position;
+        } else {
+            Debug.Log("Player is not the collider !");
         }
     }
 }
