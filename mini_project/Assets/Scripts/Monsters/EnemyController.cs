@@ -19,8 +19,9 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        target = GameObject.FindGameObjectWithTag("Player");
         // Sucht das target GameObject und bewegt sich zu ihm
-        Vector3 vecotToTarget = target.transform.position;
-        agent.SetDestination(vecotToTarget);
+        Vector3 vectorToTarget = target.transform.position;
+        agent.SetDestination(vectorToTarget);
     }
 }
