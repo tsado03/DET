@@ -16,10 +16,12 @@ public class DestroySimpleBoullets : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.x < -xOutOfBound || transform.position.z > xOutOfBound ||
+        if (transform.position.x < -xOutOfBound || transform.position.x > xOutOfBound ||
             transform.position.z < -3 * zOutOfBound || transform.position.z > zOutOfBound + 10.0f) 
         {
             Destroy(gameObject);
+        } else {
+            Debug.Log("Bullet(s) is(are) still inbounds !");
         }
     }
 }

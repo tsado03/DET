@@ -17,4 +17,9 @@ public class SimpleBoulletBehavior : MonoBehaviour
     {
         transform.Translate(Vector3.back * Time.deltaTime * boulletSpeed);
     }
+
+    void OnCollisionEnter(Collision col) {
+        boulletSpeed = 0.0f;
+        Destroy(gameObject);
+    }
 }
