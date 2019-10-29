@@ -946,6 +946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 331701593}
+  target: {fileID: 2039955450}
 --- !u!195 &331701593
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5646,6 +5647,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1663712557892934454, guid: af080b6b2234d8246a7e9227e029e3ee,
     type: 3}
   m_PrefabInstance: {fileID: 1333859182}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2039955450 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5594300562486896502, guid: 6ba0c648bcef5204eafe09ab6090b79c,
+    type: 3}
+  m_PrefabInstance: {fileID: 5594300562362090244}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2045240854
 PrefabInstance:
