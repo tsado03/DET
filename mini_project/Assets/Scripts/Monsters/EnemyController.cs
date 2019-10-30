@@ -9,7 +9,6 @@ public class EnemyController : MonoBehaviour
     public NavMeshAgent agent;
     public GameObject target;
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +18,15 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        target = GameObject.FindGameObjectWithTag("Player");
-        // Sucht das target GameObject und bewegt sich zu ihm
-        Vector3 vectorToTarget = target.transform.position;
-        agent.SetDestination(vectorToTarget);
+        if (agent.CompareTag("EasyMonster")) {
+            target = GameObject.FindGameObjectWithTag("Player");
+            // Sucht das target GameObject und bewegt sich zu ihm
+            Vector3 vectorToTarget = target.transform.position;
+            agent.SetDestination(vectorToTarget);
+        } else {
+            Debug.Log("The agent is " + agent.gameObject.tag);
+            //implementmovement for other type of monster
+        }
+        
     }
 }
