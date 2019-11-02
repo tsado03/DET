@@ -321,7 +321,7 @@ MonoBehaviour:
     type: 3}
   strongMonster: {fileID: 8687443916974838507, guid: 71fe2e0b8606a8c4a9193cc8ad6137c4,
     type: 3}
-  maxNumberOfMonsterToSpawned: 5
+  maxNumberOfMonsterToSpawned: 2
   delayToSpawnAnotherMonster: 0.3
 --- !u!4 &55747524
 Transform:
@@ -909,7 +909,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ea21cc81c8587f42a479c68f8c9c2ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 886973548}
   teleportLocation: {fileID: 871983479}
 --- !u!65 &293163861
 BoxCollider:
@@ -933,7 +933,7 @@ Transform:
   m_GameObject: {fileID: 293163859}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -19.23, y: 1.29, z: 0}
-  m_LocalScale: {x: 1, y: 2.5, z: 2}
+  m_LocalScale: {x: 0.5, y: 2.5, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -1693,7 +1693,7 @@ MonoBehaviour:
     type: 3}
   strongMonster: {fileID: 8687443916974838507, guid: 71fe2e0b8606a8c4a9193cc8ad6137c4,
     type: 3}
-  maxNumberOfMonsterToSpawned: 5
+  maxNumberOfMonsterToSpawned: 2
   delayToSpawnAnotherMonster: 0.9
 --- !u!4 &538245807
 Transform:
@@ -2702,6 +2702,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &886973548 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1027317941564609309, guid: f00993315617f324fa9c38dfaebbb598,
+    type: 3}
+  m_PrefabInstance: {fileID: 597057054}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &937864425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2905,7 +2911,7 @@ MonoBehaviour:
     type: 3}
   strongMonster: {fileID: 8687443916974838507, guid: 71fe2e0b8606a8c4a9193cc8ad6137c4,
     type: 3}
-  maxNumberOfMonsterToSpawned: 5
+  maxNumberOfMonsterToSpawned: 2
   delayToSpawnAnotherMonster: 0.6
 --- !u!4 &949428748
 Transform:
@@ -4246,7 +4252,7 @@ Transform:
   m_GameObject: {fileID: 1366476990}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 19.23, y: 1.29, z: 0}
-  m_LocalScale: {x: 1, y: 2.5, z: 2}
+  m_LocalScale: {x: 0.5, y: 2.5, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -4263,7 +4269,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ea21cc81c8587f42a479c68f8c9c2ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 886973548}
   teleportLocation: {fileID: 1634563105}
 --- !u!4 &1367770335 stripped
 Transform:
@@ -6287,7 +6293,7 @@ MonoBehaviour:
     type: 3}
   strongMonster: {fileID: 8687443916974838507, guid: 71fe2e0b8606a8c4a9193cc8ad6137c4,
     type: 3}
-  maxNumberOfMonsterToSpawned: 5
+  maxNumberOfMonsterToSpawned: 2
   delayToSpawnAnotherMonster: 1.2
 --- !u!4 &2112889075
 Transform:
