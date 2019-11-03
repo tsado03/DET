@@ -321,7 +321,7 @@ MonoBehaviour:
     type: 3}
   strongMonster: {fileID: 8687443916974838507, guid: 71fe2e0b8606a8c4a9193cc8ad6137c4,
     type: 3}
-  maxNumberOfMonsterToSpawned: 2
+  maxNumberOfMonsterToBeSpawned: 2
   delayToSpawnAnotherMonster: 0.3
 --- !u!4 &55747524
 Transform:
@@ -1693,7 +1693,7 @@ MonoBehaviour:
     type: 3}
   strongMonster: {fileID: 8687443916974838507, guid: 71fe2e0b8606a8c4a9193cc8ad6137c4,
     type: 3}
-  maxNumberOfMonsterToSpawned: 2
+  maxNumberOfMonsterToBeSpawned: 2
   delayToSpawnAnotherMonster: 0.9
 --- !u!4 &538245807
 Transform:
@@ -1949,6 +1949,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1027317941564609306, guid: f00993315617f324fa9c38dfaebbb598,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1027317941564609306, guid: f00993315617f324fa9c38dfaebbb598,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1027317941564609306, guid: f00993315617f324fa9c38dfaebbb598,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f00993315617f324fa9c38dfaebbb598, type: 3}
@@ -2911,7 +2926,7 @@ MonoBehaviour:
     type: 3}
   strongMonster: {fileID: 8687443916974838507, guid: 71fe2e0b8606a8c4a9193cc8ad6137c4,
     type: 3}
-  maxNumberOfMonsterToSpawned: 2
+  maxNumberOfMonsterToBeSpawned: 2
   delayToSpawnAnotherMonster: 0.6
 --- !u!4 &949428748
 Transform:
@@ -6293,7 +6308,7 @@ MonoBehaviour:
     type: 3}
   strongMonster: {fileID: 8687443916974838507, guid: 71fe2e0b8606a8c4a9193cc8ad6137c4,
     type: 3}
-  maxNumberOfMonsterToSpawned: 2
+  maxNumberOfMonsterToBeSpawned: 2
   delayToSpawnAnotherMonster: 1.2
 --- !u!4 &2112889075
 Transform:

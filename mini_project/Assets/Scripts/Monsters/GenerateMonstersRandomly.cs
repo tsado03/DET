@@ -9,7 +9,7 @@ public class GenerateMonstersRandomly : MonoBehaviour
     public GameObject strongMonster;
     private float xPos;
     private float zPos;
-    public float maxNumberOfMonsterToSpawned;
+    public float maxNumberOfMonsterToBeSpawned;
     private int monstersCount = 0;
     public float delayToSpawnAnotherMonster; //in seconds
     private float durationAfterStartedTheGame;
@@ -49,14 +49,14 @@ public class GenerateMonstersRandomly : MonoBehaviour
                                     gameObject.transform.position.z + gameObject.transform.localScale.z / 2);
                 Instantiate(strongMonster, new Vector3(xPos, 0, zPos), Quaternion.identity);
             } else {
-                Debug.LogError("Tag StrongMonster not found !");
+                Debug.LogError("Maximum of monster is reached!");
             }
             maxStrongMonsters--;
         }
     }
 
     IEnumerator GenerateRandomlyMonsters() {
-        while (monstersCount < maxNumberOfMonsterToSpawned) {
+        while (monstersCount < maxNumberOfMonsterToBeSpawned) {
             xPos = Random.Range(gameObject.transform.position.x - gameObject.transform.localScale.x / 2, 
                                 gameObject.transform.position.x + gameObject.transform.localScale.x / 2);
             zPos = Random.Range(gameObject.transform.position.z - gameObject.transform.localScale.z / 2, 
