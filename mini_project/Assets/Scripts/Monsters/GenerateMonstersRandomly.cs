@@ -49,7 +49,7 @@ public class GenerateMonstersRandomly : MonoBehaviour
                                     gameObject.transform.position.z + gameObject.transform.localScale.z / 2);
                 Instantiate(strongMonster, new Vector3(xPos, 0, zPos), Quaternion.identity);
             } else {
-                Debug.LogError("Maximum of monster is reached!");
+                Debug.Log("Maximum of monster is reached!");
             }
             maxStrongMonsters--;
         }
