@@ -38,17 +38,12 @@ public class EnemyController : MonoBehaviour
                 StartCoroutine(ManageDelaytimeToGetANewPosition());
             }
         } else if (agent.CompareTag("StrongMonster")) {
-            if (agent.transform.position.Equals(new Vector3(0, 1, 0))) {
-                mostFollowPlayer = true;
-            }
-            if (mostFollowPlayer == false) {
-                agent.SetDestination(new Vector3(0, 0, 0));
-            } else {
+            
                 Debug.Log("Monster most follow player's position, when reach the center!");
                 target = GameObject.FindGameObjectWithTag("Player");
                 Vector3 vectorToTarget = target.transform.position;
                 agent.SetDestination(vectorToTarget);
-            }
+            
         }
     }
 
