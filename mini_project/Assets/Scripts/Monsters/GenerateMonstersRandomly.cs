@@ -13,8 +13,8 @@ public class GenerateMonstersRandomly : MonoBehaviour
     private int monstersCount = 0;
     public float delayToSpawnAnotherMonster; //in seconds
     private float durationAfterStartedTheGame;
-    private int maxMiddleMonsters = 4;
-    private int maxStrongMonsters = 2;
+    private int maxMiddleMonsters = 6;
+    private int maxStrongMonsters = 4;
     // Start is called before the first frame update
     void Start()
     {

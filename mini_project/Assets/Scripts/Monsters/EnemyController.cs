@@ -38,7 +38,7 @@ public class EnemyController : MonoBehaviour
                 StartCoroutine(ManageDelaytimeToGetANewPosition());
             }
         } else if (agent.CompareTag("StrongMonster")) {
-            if (agent.transform.position.Equals(new Vector3(0, 0.08332547f, 0))) {
+            if (agent.transform.position.Equals(new Vector3(0, 1, 0))) {
                 mostFollowPlayer = true;
             }
             if (mostFollowPlayer == false) {
