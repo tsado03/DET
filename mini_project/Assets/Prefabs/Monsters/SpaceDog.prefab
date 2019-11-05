@@ -1239,6 +1239,8 @@ GameObject:
   - component: {fileID: 195714552233691772}
   - component: {fileID: 2713169413325190264}
   - component: {fileID: 7137077345767310144}
+  - component: {fileID: 114742157979699708}
+  - component: {fileID: 114523358473662534}
   m_Layer: 0
   m_Name: SpaceDog
   m_TagString: StrongMonster
@@ -1331,3 +1333,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 195714552233691772}
   target: {fileID: 1027317941564609309, guid: f00993315617f324fa9c38dfaebbb598, type: 3}
+--- !u!114 &114742157979699708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8687443916974838507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5947db334f1c2f04987a02da155def38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 150
+--- !u!114 &114523358473662534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8687443916974838507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3984e7c8e5966e5498bf3258b5f2dd3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 60
+  timeBetweenAttacks: 1

@@ -6,7 +6,7 @@ public class PowerUpSpawn : MonoBehaviour
 {
     public GameObject powerUp;
 
-    private float spawnDelay = 45.0f;
+    public float spawnDelay = 45.0f;
     private float lastTimeSpawned;
     private Vector3 spawnPoint;
 

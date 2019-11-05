@@ -121,7 +121,7 @@ Transform:
   m_GameObject: {fileID: 1027317941564609309}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -17.5, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 1027317942152105476}
   - {fileID: 1027317942136066121}
@@ -162,7 +162,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 80
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &1027317941564609308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,6 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   boullet: {fileID: 4943922784851631018, guid: d613e62472476204d8a10901027e6ec8, type: 3}
+  playerLifePoints: 1000
 --- !u!136 &4757842813827758609
 CapsuleCollider:
   m_ObjectHideFlags: 0

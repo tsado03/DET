@@ -511,6 +511,8 @@ GameObject:
   - component: {fileID: 136594244079198654}
   - component: {fileID: 2966763313212448651}
   - component: {fileID: 934681413067363080}
+  - component: {fileID: 114380136244743246}
+  - component: {fileID: 114640761854579370}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: MiddleMonster
@@ -604,6 +606,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 2966763313212448651}
   target: {fileID: 1027317941564609309, guid: f00993315617f324fa9c38dfaebbb598, type: 3}
+--- !u!114 &114380136244743246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2494734777849059761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5947db334f1c2f04987a02da155def38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 200
+--- !u!114 &114640761854579370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2494734777849059761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3984e7c8e5966e5498bf3258b5f2dd3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 50
+  timeBetweenAttacks: 1
 --- !u!1 &2494734777849059763
 GameObject:
   m_ObjectHideFlags: 0

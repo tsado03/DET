@@ -68,6 +68,7 @@ public class PayerMouvements : MonoBehaviour
         Debug.Log("collider name: " + other.name);
     }
 
+    /*
     void OnCollisionEnter(Collision monster) {
         if (playerLifePoints <= 0){
             Destroy(gameObject);
@@ -95,5 +96,5 @@ public class PayerMouvements : MonoBehaviour
         if (monster.gameObject.CompareTag("StrongMonster")) {
             playerLifePoints -= 2;
         }
-    }
+    } */
 }

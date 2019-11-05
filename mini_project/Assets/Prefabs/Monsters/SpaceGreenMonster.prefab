@@ -2247,6 +2247,8 @@ GameObject:
   - component: {fileID: 3183825407839550984}
   - component: {fileID: 3278262452399074577}
   - component: {fileID: 1195888138}
+  - component: {fileID: 114776944121076096}
+  - component: {fileID: 114774183561156732}
   - component: {fileID: 1195888139}
   m_Layer: 0
   m_Name: SpaceGreenMonster
@@ -2321,6 +2323,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 1195888139}
   target: {fileID: 1027317941564609309, guid: f00993315617f324fa9c38dfaebbb598, type: 3}
+--- !u!114 &114776944121076096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3277837495255224550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5947db334f1c2f04987a02da155def38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 20
+--- !u!114 &114774183561156732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3277837495255224550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3984e7c8e5966e5498bf3258b5f2dd3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 10
+  timeBetweenAttacks: 2
 --- !u!195 &1195888139
 NavMeshAgent:
   m_ObjectHideFlags: 0
