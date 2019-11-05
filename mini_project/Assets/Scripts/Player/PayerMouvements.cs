@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class PayerMouvements : MonoBehaviour
 {
+    public float speed = 3.0f;
+    public GameObject[] boullets;
+
     private float horizontalInput;
     private float verticalInput;
-    public float speed = 3.0f;
-    public GameObject boullet;
     private float timeToFire = 0.0f;
     private float fireRate = 4.0f;
+    private int powerUpCount;
+    private GameObject projectile;
+    private PlayerHealth hp;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        powerUpCount = 0;
+        projectile = boullets[0];
+        hp = gameObject.GetComponent<PlayerHealth>();
     }
 
     // Update is called once per frame
@@ -32,7 +38,63 @@ public class PayerMouvements : MonoBehaviour
         
         if (Input.GetKey(KeyCode.Space) && Time.time >= timeToFire) { //shoot boullet with delay
             timeToFire = Time.time + 1 / fireRate;
-            Instantiate(boullet, GameObject.FindGameObjectWithTag("BoulletPosition").transform.position, GameObject.FindGameObjectWithTag("BoulletPosition").transform.rotation);
+            Instantiate(projectile, GameObject.FindGameObjectWithTag("BoulletPosition").transform.position, GameObject.FindGameObjectWithTag("BoulletPosition").transform.rotation);
         }
     }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        // wenn Player ein Medpack berührt wird er um 100 HP geheilt und das Medpack wird zerstört
+        if (other.name  == "Medpack")
+        {
+            hp.Heal(100);
+            Destroy(other.gameObject);
+        }
+
+        // wenn Player ein Powerup berührt bekommt er die nächst besseren Boullets
+        if (other.name == "PowerUp")
+        {
+            powerUpCount++;
+            if( powerUpCount < boullets.Length)
+            {
+                projectile = boullets[powerUpCount];
+                Debug.Log("WEAPON UPGRADED: " + boullets[powerUpCount].name);
+            }
+            Debug.Log("Destroy: " + other.name);
+            Destroy(other.gameObject);
+        }
+
+        Debug.Log("collider name: " + other.name);
+    }
+
+    /*
+    void OnCollisionEnter(Collision monster) {
+        if (playerLifePoints <= 0){
+            Destroy(gameObject);
+        }
+        if (monster.gameObject.CompareTag("EasyMonster")) {
+            playerLifePoints -= 2;
+        }
+        if (monster.gameObject.CompareTag("MiddleMonster")) {
+            playerLifePoints -= 20;
+        }
+        if (monster.gameObject.CompareTag("StrongMonster")) {
+            playerLifePoints -= 10;
+        }
+    }
+    void OnCollisionStay(Collision monster) {
+        if (playerLifePoints <= 0){
+            Destroy(gameObject);
+        }
+        if (monster.gameObject.CompareTag("EasyMonster")) {
+            playerLifePoints -= 1;
+        }
+        if (monster.gameObject.CompareTag("MiddleMonster")) {
+            playerLifePoints -= 5;
+        }
+        if (monster.gameObject.CompareTag("StrongMonster")) {
+            playerLifePoints -= 2;
+        }
+    } */
 }

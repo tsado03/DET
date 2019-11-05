@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - BoulletPosition
+  - MiddleMonster
+  - StrongMonster
+  - EasyMonster
+  - SimpleBoullet
+  - PlayerPoints
   layers:
   - Default
   - TransparentFX
