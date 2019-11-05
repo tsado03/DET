@@ -67,4 +67,33 @@ public class PayerMouvements : MonoBehaviour
 
         Debug.Log("collider name: " + other.name);
     }
+
+    void OnCollisionEnter(Collision monster) {
+        if (playerLifePoints <= 0){
+            Destroy(gameObject);
+        }
+        if (monster.gameObject.CompareTag("EasyMonster")) {
+            playerLifePoints -= 2;
+        }
+        if (monster.gameObject.CompareTag("MiddleMonster")) {
+            playerLifePoints -= 20;
+        }
+        if (monster.gameObject.CompareTag("StrongMonster")) {
+            playerLifePoints -= 10;
+        }
+    }
+    void OnCollisionStay(Collision monster) {
+        if (playerLifePoints <= 0){
+            Destroy(gameObject);
+        }
+        if (monster.gameObject.CompareTag("EasyMonster")) {
+            playerLifePoints -= 1;
+        }
+        if (monster.gameObject.CompareTag("MiddleMonster")) {
+            playerLifePoints -= 5;
+        }
+        if (monster.gameObject.CompareTag("StrongMonster")) {
+            playerLifePoints -= 2;
+        }
+    }
 }
