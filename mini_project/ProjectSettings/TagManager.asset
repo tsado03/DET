@@ -9,6 +9,7 @@ TagManager:
   - StrongMonster
   - EasyMonster
   - SimpleBoullet
+  - PlayerPoints
   layers:
   - Default
   - TransparentFX

@@ -10,6 +10,7 @@ public class PayerMouvements : MonoBehaviour
     public GameObject boullet;
     private float timeToFire = 0.0f;
     private float fireRate = 4.0f;
+    public int playerLifePoints = 100;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,35 @@ public class PayerMouvements : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) && Time.time >= timeToFire) { //shoot boullet with delay
             timeToFire = Time.time + 1 / fireRate;
             Instantiate(boullet, GameObject.FindGameObjectWithTag("BoulletPosition").transform.position, GameObject.FindGameObjectWithTag("BoulletPosition").transform.rotation);
+        }
+    }
+
+    void OnCollisionEnter(Collision monster) {
+        if (playerLifePoints <= 0){
+            Destroy(gameObject);
+        }
+        if (monster.gameObject.CompareTag("EasyMonster")) {
+            playerLifePoints -= 2;
+        }
+        if (monster.gameObject.CompareTag("MiddleMonster")) {
+            playerLifePoints -= 20;
+        }
+        if (monster.gameObject.CompareTag("StrongMonster")) {
+            playerLifePoints -= 10;
+        }
+    }
+    void OnCollisionStay(Collision monster) {
+        if (playerLifePoints <= 0){
+            Destroy(gameObject);
+        }
+        if (monster.gameObject.CompareTag("EasyMonster")) {
+            playerLifePoints -= 1;
+        }
+        if (monster.gameObject.CompareTag("MiddleMonster")) {
+            playerLifePoints -= 5;
+        }
+        if (monster.gameObject.CompareTag("StrongMonster")) {
+            playerLifePoints -= 2;
         }
     }
 }

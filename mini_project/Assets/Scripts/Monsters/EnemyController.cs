@@ -9,7 +9,7 @@ public class EnemyController : MonoBehaviour
     public NavMeshAgent agent;
     public GameObject target;
     private bool mostFollowPlayer = false;
-    private int nbrOfBulletsToDieEasyM = 4;
+    private int nbrOfBulletsToDieEasyM = 3;
     private int nbrOfBulletsToDieMiddleM = 12;
     private int nbrOfBulletsToDieStrongM = 8;
     private float waitBeforGoFollowTheNewTarget = 02.50f; //The monster will move to a random position
