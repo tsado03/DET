@@ -105,6 +105,8 @@ GameObject:
   - component: {fileID: 7292048113649250228}
   - component: {fileID: 1027317941564609308}
   - component: {fileID: 4757842813827758609}
+  - component: {fileID: 886973554}
+  - component: {fileID: 886973555}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -161,7 +163,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 1
 --- !u!114 &1027317941564609308
 MonoBehaviour:
@@ -176,8 +178,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  boullet: {fileID: 4943922784851631018, guid: d613e62472476204d8a10901027e6ec8, type: 3}
-  playerLifePoints: 1000
+  boullets:
+  - {fileID: 4943922784851631018, guid: d613e62472476204d8a10901027e6ec8, type: 3}
+  - {fileID: 8668049702493877190, guid: 7e015051ae1aff84cafa05c1dc14fecd, type: 3}
+  - {fileID: 4338290718573674942, guid: 9fe161b63875a724fb30d3d166f2aeef, type: 3}
+  - {fileID: 3088352732371253389, guid: 766163d8dd2c26f43a3ae08a7f4b7307, type: 3}
+  - {fileID: 4975408631294112654, guid: 81c0b195d4111844290b007e1b89912e, type: 3}
 --- !u!136 &4757842813827758609
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -192,6 +198,45 @@ CapsuleCollider:
   m_Height: 5
   m_Direction: 1
   m_Center: {x: 0.00999999, y: 1.3817425, z: 0.08148855}
+--- !u!114 &886973554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027317941564609309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56cb86e4e304d1d46913528642f953ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1000
+--- !u!114 &886973555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027317941564609309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4484ff954791477488ce68eb85fa6de7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numOfHearts: 10
+  hearts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fullHeart: {fileID: 21300000, guid: 8691d4cd3d0d9604a888398ef5076b9a, type: 3}
+  emptyHeart: {fileID: 21300002, guid: 8691d4cd3d0d9604a888398ef5076b9a, type: 3}
 --- !u!1 &1027317941639746072
 GameObject:
   m_ObjectHideFlags: 0
